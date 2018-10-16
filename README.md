@@ -5,18 +5,21 @@ Early Stack Concept:
 
 TODO: Add URL's for docs that correlate with each of the below technologies.
 ___
-- databases
-- mongodb
-- mysql
-___
+## Front
 - react
 - redux
 - react router
 ___
+## Middle
 - node
 - express
 - (python - heavy computation uses)
 ___
+## Back / Databases
+- mongodb
+- mysql
+___
+## Ecosystem / Other
 - aws
 - serverless
 - docker
