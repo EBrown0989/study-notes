@@ -1,0 +1,4 @@
+DATABASES AND collections
+
+MongoDB stores BSON documents, i.e. data records, in collections;
+    the collections in databases.
