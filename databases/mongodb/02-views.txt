@@ -1,0 +1,4 @@
+MONGODB MANUAL 4.0 (10/16/2018)
+Source: https://docs.mongodb.com/manual/core/views/
+
+VIEWS

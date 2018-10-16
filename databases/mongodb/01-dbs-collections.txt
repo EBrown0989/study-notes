@@ -1,4 +1,69 @@
-DATABASES AND collections
+MONGODB MANUAL 4.0 (10/16/2018)
+Source: https://docs.mongodb.com/manual/core/databases-and-collections/
+
+DATABASES AND COLLECTIONS
 
 MongoDB stores BSON documents, i.e. data records, in collections;
     the collections in databases.
+
+DATABASES
+
+In MongoDB, databases hold collections of documents.
+
+Select a database in the mongo shell:
+
+    use <db>
+
+If a database doesn't exist, MongoDB creates it when you first store data in that
+    database.
+
+    use myNewDB
+
+    db.myNewCollection1.insertOne( { x: 1 } )
+
+The insertOne() operation creates both the database and collection referenced, if
+    they do not already exist.
+
+COLLECTIONS
+
+MongoDB stores documents in collecitons. Collections are analogous to tables in
+    relational databases.
+
+Create a Collection
+
+    db.myNewCollection2.insertOne({x:1})
+    db.myNewCollection3.createIndex({y:1})
+
+Both of these operations will create their respective collections if they don't
+    exist already.
+
+NOTE - Naming Restrictions: <https://docs.mongodb.com/manual/reference/limits/#restrictions-on-collection-names>
+
+Explicit Creation
+
+The db.createCollection() method is used to explicitly create a collection with
+    various options, such as setting the maximum size or the documentation
+    validation rules.
+
+Use collMod to modify these options.
+
+Document Validation
+
+By default, a collection doesn't require its documents to have the same schema.
+    However, you can envorce document validation rules for a collection during
+    update and insert operations.
+
+    <https://docs.mongodb.com/manual/core/schema-validation/>
+
+Modifying Document Structure
+
+To change the structure of the documents in a collection, update the documents to
+    the new structure.
+
+Unique Identifiers
+
+Collections are assigned an immutable UUID, which remains the same across all
+    members of a replica set and shards in a sharded cluster.
+
+To retrieve the UUID, run either the listCollections command or the
+    db.getCollectionInfos() method.
