@@ -4,19 +4,19 @@ Notes from docs that relate to my preferred stack. Enables me to make notes abou
 Early Stack Concept:
 
 TODO: Add URL's for docs that correlate with each of the below technologies.
-
-databases
+___
+- databases
 - mongodb
 - mysql
-
-react
-redux
-react router
-
-node
-express
-(python - heavy computation uses)
-
-aws
-serverless
-docker
+___
+- react
+- redux
+- react router
+___
+- node
+- express
+- (python - heavy computation uses)
+___
+- aws
+- serverless
+- docker
