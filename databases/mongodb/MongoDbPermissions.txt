@@ -1,0 +1,49 @@
+Source:
+https://stackoverflow.com/questions/9884233/mongodb-service-is-not-starting-up
+________________________________________________________________________________
+PROBLEM: MongoDB Service fails to start.
+FIX: Permissions were incorrect in the database directory.
+________________________________________________________________________________
+To check permissions:
+
+ls -l /var/lib/mongodb
+
+total 245780
+drwxr-xr-x 2 mongodb mongodb     4096 Jan 20 09:14 journal
+drwxr-xr-x 2 root    root        4096 Jan 20 09:11 local
+-rw------- 1 root    root    67108864 Jan 20 09:11 local.0
+-rw------- 1 root    root    16777216 Jan 20 09:11 local.ns
+-rwxr-xr-x 1 mongodb nogroup        0 Jan 20 09:14 mongod.lock
+
+To fix:
+
+# chown -R mongodb:mongodb /var/lib/mongodb
+
+Remove the lock file if it's still there:
+
+# rm /var/lib/mongodb/mongod.lock
+
+Start mongodb
+
+# service mongodb start
+
+Tail the log and you should see at the end of it:
+
+tail -f /var/log/mongodb/mongodb.log
+2016-01-20T09:16:02.025-0800 [initandlisten] waiting for connections on port 27017
+
+================================================================================
+EXTRA INFO:
+
+sudo rm /var/lib/mongodb/mongod.lock
+mongod --repair
+sudo service mongodb start
+
+Check the dbpath variable in /etc/mongodb.conf.
+
+Also, somebody was bored and created a shell script to restore the mongo database easily.
+
+#!/bin/sh
+sudo rm /var/lib/mongodb/mongod.lock
+sudo -u mongodb mongod -f /etc/mongodb.conf --repair
+sudo service mongodb start

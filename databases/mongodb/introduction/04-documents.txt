@@ -1,0 +1,80 @@
+MONGODB MANUAL 4.0
+Source: https://docs.mongodb.com/manual/core/document/
+
+DOCUMENTS
+
+MongoDB stores data records as BSON documents. BSON is a binary representation
+    of JSON documents, though it contains more data types than JSON.
+
+DOCUMENT STRUCTURE
+
+MongoDB documents are composed of field-and-value pairs and have the following
+    structure:
+
+{
+    field1: value1,
+    field2: value2,
+    field3: value3,
+    ...
+    fieldN: valueN
+}
+
+The value of a field can be any of the BSON data types, including other
+    documents, arrays, and arrays of documents.
+
+FIELD NAMES
+
+Field names are strings.
+
+Documents have restrictions on field names:
+
+- _id is reserved, and must be unique within the collection. It's immutable and
+    may be of any type other than an array.
+- cannot contain null
+- top-level field names cannot START with $.
+
+IMPORTANT!
+The use of $ and . in field names is not recommended as it is not supported by
+    the official MongoDB drivers.
+
+Some documents created by internal MongoDB processes may have duplicate fields,
+    but no MongoDB process will ever add duplicate fields to an existing user document.
+
+Field Value Limit - Maximum Index Key Length
+
+DOT NOTATION
+
+MongoDB uses the dot notation to access the elements of an array and to access
+    the fields of an embedded document.
+
+"<array>.<index>"
+
+"<embedded document>.<field>"
+
+DOCUMENT LIMITATIONS
+
+Document Size Limit
+
+Document Field Order
+
+- The _id field is always the first field in the document.
+- Updates that include renaming of field names may result in the reordering of
+    fields in the document.
+
+    Since version 2.6, MongoDB actively attempts to preserve field order in a document.
+
+The _id Field
+
+- Acts as a primary key.
+
+!WARNING!
+To ensure functioning replication, do not store values that are of the BSON
+    regular expression type in the _id field.
+
+OTHER USES OF THE DOCUMENT STRUCTURE
+
+- Query Filters
+- Update Specifications Documents
+- Index Specification Documents
+
+MORE INFO: https://www.mongodb.com/blog/post/thinking-documents-part-1?jmp=docs
