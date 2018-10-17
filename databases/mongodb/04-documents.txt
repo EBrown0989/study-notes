@@ -1,3 +1,6 @@
+MONGODB MANUAL 4.0
+Source: https://docs.mongodb.com/manual/core/document/
+
 DOCUMENTS
 
     MongoDB stores data records as BSON documents. BSON is a binary representation

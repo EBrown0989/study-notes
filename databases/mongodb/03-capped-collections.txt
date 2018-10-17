@@ -1,0 +1,46 @@
+MONGODB MANUAL 4.0
+Source: https://docs.mongodb.com/manual/core/capped-collections/
+
+CAPPED COLLECTIONS
+
+Capped collections are fixed-size collections that support high-throughput operations
+    that insert and retrieve documents based upon insertion order. They function
+    similarly to circular buffers: once filled, it makes room for new documents by
+    overwriting the oldest documents in the collection.
+
+RESTRICTIONS AND RECOMMENDATIONS
+
+You cannot shard a capped collection.
+
+PROCEDURES
+
+db.createCollection( "log", { capped: true, size: 100000 } )
+
+If the size field is less than or equal to 4096, then the collection will have a
+    cap of 4096 bytes. Otherwise, MongoDB will raise the provided size to make it
+    an integer multiple of 256.
+
+db.createCollection("log", { capped : true, size : 5242880, max : 5000 } )
+
+IMPORTANT!
+The size argument is always required, even when you specify max number of documents.
+    MongoDB will remove older documents if a collection reaches the maximum size
+    limit before it reaches the maximum document count.
+
+Query a Capped Collection:
+    db.cappedCollection.find().sort( { $natural: -1 } )
+
+Check if a Collection is Capped
+    db.collection.isCapped()
+
+Convert a Collection to Capped
+    db.runCommand({"convertToCapped": "mycoll", size: 100000});
+
+Automatically Remove Data After a Specified Period of Time:
+
+As an alternative to capped collections, consider MongoDB’s TTL (“time to live”)
+    indexes. As described in Expire Data from Collections by Setting TTL, these
+    indexes allow you to expire and remove data from normal collections based on
+    the value of a date-typed field and a TTL value for the index.
+
+You can use a tailable cursor with capped collections.
