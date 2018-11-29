@@ -1,5 +1,5 @@
 # Quick reference to Webpack's EnvironmentPlugin
-### [Webpack](https://webpack.js.org/plugins/environment-plugin/)
+### [Webpack EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/)
 
 Accepts either an array of keys or an object mapping its keys to their default values.
 ```js
