@@ -1,8 +1,0 @@
-https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/
-
-General info for starting mysql-server and then connecting to it with auth on.
-
-sudo service mysql (status|start|stop)
-
-mysql -u root -p
-mysqladmin -u root -p password
