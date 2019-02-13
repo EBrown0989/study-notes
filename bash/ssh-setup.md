@@ -34,7 +34,7 @@ The content of id_rsa.pub (or id_dsa as I had) will have to be added to a file a
 
 ```Bash
 # Store the contents of your id_rsa.pub key in a bash variable.
-$ public_key_string = $(cat ~/.ssh/id_rsa.pub)
+$ public_key_string=$(cat ~/.ssh/id_rsa.pub)
 
 # Make your .ssh directory if you haven't already. Permissions might need to be set.
 $ mkdir -p ~/.ssh
