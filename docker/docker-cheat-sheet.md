@@ -1,6 +1,7 @@
 # Docker Cheat Sheet
 
-## Getting Started, Part 1
+## Get Started, Part 1
+> Orientation
 
 ```Bash
 ## List Docker CLI commands
@@ -24,7 +25,9 @@ docker container ls --all
 docker container ls -aq
 ```
 
-## Getting Started, Part 2
+## Get Started, Part 2
+> containers
+
 ```Bash
 docker build -t friendlyhello . # Create image using this directory's Dockerfile
 docker run -p 4000:80 friendlyhello # Run "friendlyname" mapping port 4000 to 80
@@ -50,7 +53,39 @@ docker push username/repository:tag # Upload tagged image to registry
 docker run username/repository:tag # Run image from a registry
 ```
 
-## Getting Started, Part 3
+## Get Started, Part 3
+> Services
+
+```Bash
+docker stack ls # List stacks or aps
+docker stack deploy -c <composefile> <appname> # Run the specified Compose file
+
+docker service ls # List running services associated with an app
+docker service ps <service> # List tasks associated with an app
+
+docker inspect <task or container> # Inspect task or container
+docker container ls -q # List container IDs
+docker stack rm <appname> # Tear down application
+ docker swarm leave --force # Take down a single node swarm from the manager.
+```
+
+## Get Started, Part 4
+> Swarms
+
+```Bash
+(╯°□°)╯︵ ┻━┻
+```
+
+## Get Started, Part 5
+> Stacks
+
+```Bash
+(╯°□°)╯︵ ┻━┻
+```
+
+## Get Started, Part 6
+> Deploy your app
+
 ```Bash
 (╯°□°)╯︵ ┻━┻
 ```
