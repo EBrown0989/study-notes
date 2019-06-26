@@ -1,0 +1,32 @@
+MONGODB MANUAL 4.0
+Source: https://docs.mongodb.com/manual/tutorial/enable-authentication/
+
+START MONGODB WITHOUT ACCESS CONTROL
+mongod --port 27017 --dbpath /data/db1
+
+CONNECT TO THE INSTANCE
+mongo --port 27017
+
+CREATE THE USER ADMINISTRATOR
+use admin
+db.createUser(
+  {
+    user: "myUserAdmin",
+    pwd: "abc123",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+  }
+)
+
+RE-START THE MONGODB INSTANCE WITH ACCESS CONTROL
+mongod --auth --port 27017 --dbpath /data/db1
+
+CONNECT AND AUTHENTICATE AS THE USER ADMIN
+
+-To authenticate during connection:
+mongo --port 27017 -u "myUserAdmin" -p "abc123" --authenticationDatabase "admin"
+
+-To authenticate after connecting:
+mongo --port 27017
+
+use admin
+db.auth("myUserAdmin", "abc123" )

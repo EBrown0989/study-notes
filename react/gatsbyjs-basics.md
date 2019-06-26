@@ -1,1 +1,0 @@
-# GatsbyJS - Static Site Generator
