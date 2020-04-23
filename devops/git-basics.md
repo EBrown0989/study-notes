@@ -1,24 +1,40 @@
 # Git Basics
 
-![Git logo (light-bg)](https://git-scm.com/images/logos/2color-lightbg@2x.png)
+![Git Terms](https://academind.com/static/fa71279ab1674d3fbb3397962904a41d/e5166/git-repo.jpg)
 
-#### - [Git Tutorial for Begnners](https://academind.com/learn/web-dev/git-the-basics/)
-#### - [Productive Git for Developers](https://egghead.io/courses/productive-git-for-developers)
-#### - [Git](https://git-scm.com/)
+## Online Resources
 
-## Add Files & Check Status
+#### - [Git Tutorial for Begnners (Academind)](https://academind.com/learn/web-dev/git-the-basics/)
+#### - [GitHub Basics (Academind)](https://academind.com/learn/web-dev/github-the-basics/)
+#### - [Productive Git for Developers (Egghead)](https://egghead.io/courses/productive-git-for-developers)
+#### - [Git Docs](https://git-scm.com/docs)
+
+## Useful Git Commands
 
 ```bash
-git status
-git add .
-git add ./file1 ./file2
-git commit -m 'your commit message goes here'
+git init # Initialize a Git repo in the current folder
+git status # the "working tree" status
+git add . # Track changes of all files in current repo
+git add filename
+git commit -m "your message"
+git log # List all commits
+
+git checkout branch-name
+git checkout commitid # Puts you in a Deatched HEAD state.
+git checkout -- . # Remove untracked changes.
+git reset --hard commitid # Turn the selected Commit into the new HEAD
+
+git branch # List branches in the current repo
+git checkout -b branch-name
+
+git merge branch-name # Merge Branch branch-name with currently active Branch
+
+git branch -D branch-name # Delete Branch branch-name
 ```
 
-Specify which files you want to commit, and then add a related
-message. Try to commit as often as possible so that your changes
-are easier to rollback in the event of a mistake. This makes it
-easier to categorize the specific changes made as well.
+The command `git merge branch-name` would merge the Branch **branch-name** with the Branch you're currently using. So, if you're on **master**, then it would attempt to automatically merge **branch-name** with **master**.
+
+If there are file conflics, you'll likely get an error. Just delete the code that you don't want to keep, commit the changes, and the merge should be completed now that the conflicts were resolved.
 
 ## Git Log
 
@@ -74,7 +90,3 @@ it to a point before your commits were added.
 
 Checkout the correct branch now and look at the log again just to
 see if everything has been corrected. If yes, push those changes!
-
-
-
-### GIT GUD
