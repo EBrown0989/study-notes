@@ -13,15 +13,16 @@
 
 ```bash
 git init # Initialize a Git repo in the current folder
-git status # the "working tree" status
+git status # The "working tree" status
 git add . # Track changes of all files in current repo
 git add filename
 git commit -m "your message"
+git commit --amend # Amend the most recent commit
 git log # List all commits
 
 git checkout branch-name
-git checkout commitid # Puts you in a Deatched HEAD state.
-git checkout -- . # Remove untracked changes.
+git checkout commitid # Puts you in a Deatched HEAD state
+git checkout -- . # Remove untracked changes
 git reset --hard commitid # Turn the selected Commit into the new HEAD
 
 git branch # List branches in the current repo
