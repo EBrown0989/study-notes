@@ -1,12 +1,13 @@
-# Product Development LifeCycle
+# [APP / SOFTWARE NAME]
 
-## Get started:
+[App / Software Description]
+
+# Get started
  - Clone the project.
  - `yarn install`: Install all dependencies
  - `yarn start`: Start the project for development
 
-## Project structure & architecture:
-
+# Project structure & architecture
 > #### Caution: This project is using `yarn` instead of npm.
 
  **Dependencies:**
@@ -24,8 +25,7 @@
 
  > Add comments about the project's format for its structure.
 
-## [Git] Development Workflow:
-
+# Development Workflow
 > Feature Branch Workflow, Git Workflow, or another Workflow Strategy? `master`, `develop`, `feature`, `release`, `hotfix`, or `bug` Branches? Branch naming conventions? Add notes about you & your team's workflow methodology.
 
 > Notes on the project's convention for features, hotfixes, release, etc.
@@ -43,12 +43,10 @@
       - If you had to rebase, you'll need to force the push with `git push origin myNewBranch -f`.
    * Create the PR and point to the [`master` / `develop`] Branch.
 
-## DevOps Server:
+# DevOps Info
+> Development, Staging, and Production Info?
 
- - Testing: TBD
- - Production: TBD
-
-## Collaborators:
+# Collaborators
 > Include: Person / Role / Contact Info / Timezone
  - Primary
  - Technical/Consultants
