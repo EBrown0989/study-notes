@@ -1,14 +1,14 @@
 # Product Development LifeCycle
 
-## Caution:
- - This project is using `yarn` instead of npm. Please use yarn cli for all commands.
-
 ## Get started:
  - Clone the project.
  - `yarn install`: Install all dependencies
  - `yarn start`: Start the project for development
 
 ## Project structure & architecture:
+
+> #### Caution: This project is using `yarn` instead of npm.
+
  **Dependencies:**
 
   - [x] React
