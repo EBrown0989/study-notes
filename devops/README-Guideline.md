@@ -32,9 +32,9 @@
 
 ## Pull Request Guidelines
    * Fetch the latest master: `git pull origin master` or `git fetch origin master` (Don't forget to stay on `master` branch)
-   * Create a new clean branch: `git checkout -b new-branch`.
-   * Do your work and make commits. You should push your work frequently.
-   * Commits were pushed to `origin`, you should rebase your own branch. Fetch again with `git fetch origin master` and run
+   * Create a new branch: `git checkout -b new-branch`.
+   * Make your changes and commit often.
+   * Were commits pushed to `origin`? If so, you should rebase your branch. Fetch with `git fetch origin master` and run
    `git rebase master`.
    * Resolve conflicts on each commit. Do it with `kdiff3` or anything that suits you. Add these modification and run `git rebase --continue` until you've cleared all conflicts.
    * Test your code.
