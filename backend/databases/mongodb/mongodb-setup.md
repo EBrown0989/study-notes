@@ -1,6 +1,6 @@
 # MongoDB Basics
 
-#### [> MongoDB 4.0 Manual](https://docs.mongodb.com/manual/)
+#### [> The MongoDB Manual](https://docs.mongodb.com/manual/)
 
 ## [Install MongoDB Community Edition on Ubuntu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
