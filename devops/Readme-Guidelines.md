@@ -1,3 +1,34 @@
+# Readme
+The project MUST include a README.md file in the Markdown format.
+
+The README.md file SHOULD be committed as the second commit, right after LICENSE.md.
+
+The README file MUST be kept up to date.
+(It is better to have incomplete information than incorrect
+or outdated information in the README.)
+
+The README file MUST include the following information:
+
+- the name of the project
+- the author(s) of the project
+- the copyright holder
+- the purpose of the project
+- people responsible for the project
+- the programming language(s) (with versions) used in the project
+- the style guide used for the code in the project
+- prerequisites of running the project
+- how to install project dependencies
+- how to build or run the project
+- what is the expected result of building or running the project
+
+The README file SHOULD include the following information:
+
+- how to set up a developer environment to conviently work on the project
+- how to submit bugs
+- how to submit feature requests if applicable
+
+---
+
 # [APP / SOFTWARE NAME]
 
 [App / Software Description]
