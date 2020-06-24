@@ -42,6 +42,6 @@ Compress: `tar -czvf name-of-archive.tar.gz /path/to/directory-or-file`
 
 > You can list multiple directories to be compressed into the archive.
 
-Extract: `tar -xzvf name-of-archive.tar.gz`
+Extract: `tar -xzvf name-of-archive.tar.gz -C /path/to/destination/`
 
 > Use `c` to **compress** and `x` to **extract**.
